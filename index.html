@@ -106,15 +106,11 @@
 </div>
 
 <script>
-    // Tabrik egasi va matni
     const ism = "Kamronbek";
     const tabrikMatni = `🎉 ${ism}, tug'ilgan kuningiz muborak bo'lsin! 🎂\n\nSizga mustahkam sog'liq, omad va barcha ezgu maqsadlaringiz ro'yobga chiqishini tilayman! ✨`;
-
-    // Telegram ulashish linkini yaratish
-    const telegramUrl = "https://t.me/share/url?text=" + encodeURIComponent(tabrikMatni);
     
-    // Tugmaga havola qo'yish
-    document.getElementById("tgShareBtn").href = telegramUrl;
+    // Tugma bosilganda to'g'ridan-to me sizning @Jony171 profilishingizga tabrik matni bilan o'tadi
+    document.getElementById("tgShareBtn").href = "https://t.me/Jony171?text=" + encodeURIComponent(tabrikMatni);
 </script>
 
 </body>
