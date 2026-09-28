@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tug'ilgan kuningiz bilan, Kamronbek!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 50px;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        h1 {
+            color: #1a2a3a;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        h1 span {
+            color: #0088cc;
+        }
+
+        p {
+            color: #4a5568;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn-telegram {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #0088cc, #005588);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 136, 204, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="badge">🎂</div>
+    <h1>Tug'ilgan kuningiz bilan, <span>Kamronbek!</span></h1>
+    
+    <p>
+        Sizga mustahkam sog'liq, cheksiz quvonch, oilaviy xotirjamlik va barcha ezgu maqsadlaringiz ro'yobga chiqishini tilaymiz! ✨
+    </p>
+
+    <!-- Telegram ulashish tugmasi -->
+    <a class="btn-telegram" id="tgShareBtn" target="_blank">
+        ✈️ Telegram'da Yuborish
+    </a>
+</div>
+
+<script>
+    // Tabrik egasi va matni
+    const ism = "Kamronbek";
+    const tabrikMatni = `🎉 ${ism}, tug'ilgan kuningiz muborak bo'lsin! 🎂\n\nSizga mustahkam sog'liq, omad va barcha ezgu maqsadlaringiz ro'yobga chiqishini tilayman! ✨`;
+
+    // Telegram ulashish linkini yaratish
+    const telegramUrl = "https://t.me/share/url?text=" + encodeURIComponent(tabrikMatni);
+    
+    // Tugmaga havola qo'yish
+    document.getElementById("tgShareBtn").href = telegramUrl;
+</script>
+
+</body>
+</html>
