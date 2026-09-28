@@ -1,1 +1,1 @@
-# Kamronbek-tabrik
+# tabrik
